@@ -3,3 +3,17 @@ body{
   background-size: cover;
   color: white;
 }
+
+#mainFooter{
+	position: fixed;
+	bottom: 0px;
+	background-color: #2d3436;
+	width: 100%;
+	opacity: 0.70;
+}
+
+#mainFooter p{
+	text-align: center;
+	margin: auto;
+	padding: auto;
+}
