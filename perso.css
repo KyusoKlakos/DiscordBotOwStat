@@ -1,6 +1,9 @@
 body{
   background-image: url('hanamura-screenshot-003-ConvertImage.jpg');
   background-size: cover;
+}
+
+p, h1, label, h2, h3{
   color: white;
 }
 
@@ -9,11 +12,29 @@ body{
 	bottom: 0px;
 	background-color: #2d3436;
 	width: 100%;
-	opacity: 0.70;
+	opacity: 0.95;
 }
 
 #mainFooter p{
 	text-align: center;
 	margin: auto;
 	padding: auto;
+}
+
+#porfilsBase{
+
+}
+
+#recherche{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #636e72;
+  opacity: 0.85;
+  width: 500px;
+}
+
+#submit{
+  display: block;
+   margin : auto;
 }

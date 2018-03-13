@@ -15,13 +15,20 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
-ajaxGet("https://ow-api.com/v1/stats/pc/eu/Kyuso-21706/complete",function (reponse){
-    var result = JSON.parse(reponse);
-    var div = document.getElementById("stats");
-    var nom = document.createElement("h2");
-    nom.textContent = result.name;
-    var ico = document.createElement("img");
-    ico.setAttribute("src",result.icon);
-    div.appendChild(nom);
-    div.appendChild(ico);
-})
+function recupDataJoueur(joueur,plateforme,region){
+  var url = "https://ow-api.com/v1/stats/"+plateforme+"/"+ region +"/"+ joueur +"/complete";
+  console.log(url);
+  ajaxGet(url,function (reponse){
+      var result = JSON.parse(reponse);
+      var div = document.getElementById("profilsBase");
+      var nom = document.createElement("h2");
+      nom.textContent = result.name;
+      var ico = document.createElement("img");
+      ico.setAttribute("src",result.icon);
+      var level = document.createElement('p');
+      level.textContent = result.level;
+      div.appendChild(nom);
+      div.appendChild(ico);
+      div.append(level);
+  })
+}
