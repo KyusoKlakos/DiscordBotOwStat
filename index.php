@@ -27,15 +27,6 @@
               <option>AS</option>
             </select><br/>
         </div>
-        <div class="form-group">
-          <label style="text-align:center;">Plateforme du joueur : </label>
-          <select name="plateforme" class="form-control">
-            <option value="" disabled selected>Plateforme</option>
-            <option>PC</option>
-            <option>PS4</option>
-            <option>XBOX</option>
-          </select><br/>
-        </div>
           <input type="submit" value="Rechercher" id="submit" class=""><br/>
         </form>
     </div>

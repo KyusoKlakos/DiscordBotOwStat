@@ -38,3 +38,9 @@ p, h1, label, h2, h3{
   display: block;
    margin : auto;
 }
+
+#imgProfil{
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}

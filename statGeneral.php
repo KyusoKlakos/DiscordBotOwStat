@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="perso.css">
     <script>
-      recupDataJoueur("<?php echo $_GET['joueur'] ?>","<?php echo $_GET['plateforme'] ?>","<?php echo $_GET['region'] ?>");
+      recupDataJoueur("<?php echo $_GET['joueur'] ?>","PC","<?php echo $_GET['region'] ?>");
     </script>
   </head>
   <body>

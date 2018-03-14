@@ -25,10 +25,11 @@ function recupDataJoueur(joueur,plateforme,region){
       nom.textContent = result.name;
       var ico = document.createElement("img");
       ico.setAttribute("src",result.icon);
+      ico.setAttribute("id","imgProfil");
+      ico.setAttribute("class","img-thumbnail");
       var level = document.createElement('p');
       level.textContent = result.level;
-      div.appendChild(nom);
       div.appendChild(ico);
-      div.append(level);
+      div.appendChild(nom);
   })
 }
