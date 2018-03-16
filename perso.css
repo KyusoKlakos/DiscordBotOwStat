@@ -1,5 +1,35 @@
+/*NavBar*/
+.navbar {
+   margin-bottom: 0;
+   background-color: #2d2d30;
+   border: 0;
+   font-size: 11px !important;
+   letter-spacing: 4px;
+   opacity:0.9;
+}
+
+.navbar li a, .navbar .navbar-brand {
+   color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+   color: #fff !important;
+}
+
+.navbar-nav li.active a {
+   color: #fff !important;
+   background-color:#29292c !important;
+}
+
+.navbar-default .navbar-toggle {
+   border-color: transparent;
+}
+/*Fin NavBar*/
+
+
 body{
-  background-image: url('hanamura-screenshot-003-ConvertImage.jpg');
+  background: url('hanamura-screenshot-003-ConvertImage.jpg')no-repeat center fixed;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -43,4 +73,16 @@ p, h1, label, h2, h3{
   float: left;
   margin-right: 10px;
   margin-left: 5px;
+}
+
+#profilsBase{
+  background-color: RED;
+  height: 140px;
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.stats{
+  background-color: black;
 }

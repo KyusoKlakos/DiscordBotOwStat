@@ -1,3 +1,7 @@
+var heros = ["ana","bastion","dVa","doomfist","genji","hanzo","junkrat","lucio","mccree","mei","mercy","moira","orisa","pharah","reaper","reinhardt","roadhog","soldier76",
+"sombra","symmetra","torbjorn","tracer","widowmaker","zarya","zennyatta"];
+console.log(heros);
+
 function ajaxGet(url, callback) {
     var req = new XMLHttpRequest();
     req.open("GET", url);
@@ -19,17 +23,18 @@ function recupDataJoueur(joueur,plateforme,region){
   var url = "https://ow-api.com/v1/stats/"+plateforme+"/"+ region +"/"+ joueur +"/complete";
   console.log(url);
   ajaxGet(url,function (reponse){
-      var result = JSON.parse(reponse);
-      var div = document.getElementById("profilsBase");
-      var nom = document.createElement("h2");
-      nom.textContent = result.name;
-      var ico = document.createElement("img");
-      ico.setAttribute("src",result.icon);
-      ico.setAttribute("id","imgProfil");
-      ico.setAttribute("class","img-thumbnail");
-      var level = document.createElement('p');
-      level.textContent = result.level;
-      div.appendChild(ico);
-      div.appendChild(nom);
-  })
+      var result = $.parseJSON(reponse);
+      var ico = $('<img>').attr({
+        src: result.icon,
+        id: "imgProfil",
+        class: "img-thumbnail"
+      });
+      var button = $('<span></span>').text('A jour !');
+      var prestige = result.prestige;
+      var level = $('<p></p>').text(prestige*100+result.level);
+      $('#profilsBase').append(ico);
+      $('#profilsBase').append(button);
+      $('#profilsBase').append(level);
+      console.log(result.quickPlayStats.topHeroes.ana);
+})
 }
