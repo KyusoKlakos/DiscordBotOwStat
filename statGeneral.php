@@ -7,6 +7,7 @@
     <script type="text/javascript" src="touteStatJSON.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="perso.css">
+    <link rel="stylesheet" href="stat.css">
     <script>
       recupDataJoueur("<?php echo $_GET['joueur'] ?>","PC","<?php echo $_GET['region'] ?>");
     </script>
@@ -56,5 +57,8 @@
     <div class="stats" id="hero23"></div>
     <div class="stats" id="hero24"></div>
     <div class="stats" id="hero25"></div>
+    <footer id="mainFooter">
+      <p>Fait par <a href="https://twitter.com/JeanKyuso">@Kyuso_yaah</a>, avec <a href="https://ow-api.com/">ow-api</a></p>
+    </footer>
   </body>
 </html>

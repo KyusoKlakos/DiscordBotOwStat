@@ -1,0 +1,56 @@
+#imgProfil{
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  
+  #profilsBase{
+    background-color:#dfe4ea;
+    height: 140px;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 493px;
+  }
+
+  .stats{
+    height: 140px;
+    margin-top: 30px;
+    margin-left: /*150px*/ 10%;
+    margin-right: /*150px*/ 10%;
+    margin-bottom: 30px;
+  }
+
+.carteHeroBase{
+    background-color: #dfe4ea;
+    height: 140px;
+    margin-left: /*300px*/25%;
+    margin-right: /*300px*/25%;
+    min-width: 493px;
+}
+
+.carteHeroBase .imgHero{
+    height: 140px;
+}
+
+.carteHeroBase .nomGame {
+    display: flex;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.carteHeroBase{
+    display: flex;
+}
+
+.nomHero{
+    margin:auto;
+    padding: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.imgHero{
+    margin-left: 10%;
+}

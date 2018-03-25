@@ -28,12 +28,12 @@
 
 
 body{
-  background: url('hanamura-screenshot-003-ConvertImage.jpg')no-repeat center fixed;
+  background: url('https://eu.battle.net/forums/static/images/backgrounds/background-overwatch-top.jpg')no-repeat center fixed;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-p, h1, label, h2, h3{
+  p, h1, label, h2, h3{
   color: white;
 }
 
@@ -51,9 +51,6 @@ p, h1, label, h2, h3{
 	padding: auto;
 }
 
-#porfilsBase{
-
-}
 
 #recherche{
   position: absolute;
@@ -67,22 +64,4 @@ p, h1, label, h2, h3{
 #submit{
   display: block;
    margin : auto;
-}
-
-#imgProfil{
-  float: left;
-  margin-right: 10px;
-  margin-left: 5px;
-}
-
-#profilsBase{
-  background-color: RED;
-  height: 140px;
-  margin-top: 60px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.stats{
-  background-color: black;
 }
