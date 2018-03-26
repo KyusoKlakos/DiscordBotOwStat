@@ -32,7 +32,7 @@ function recupDataJoueur(joueur,plateforme,region){;
       $('#profilsBase').append(button);
       $('#profilsBase').append(level);
       var index=1;
-      console.log(statQP);
+      //console.log(statQP);
       for(heroName in statQP){
         let divStat = $('#hero'+index).attr({
           id: heroName
@@ -64,13 +64,19 @@ function recupDataJoueur(joueur,plateforme,region){;
             class: "imgHero"
           }).appendTo(divCarteHeros);
         }
-        console.log(statQP[heroName]);
+        //console.log(statQP[heroName]);
         divNomGame.append(nomHeroHtml);
-        /*let partieGagner = $("<small>").attr({
-          class: "partieGagner"
-        }).text(statQP[heroName].gamesWon + " parties gagnées").appendTo(divNomGame);*/
         divCarteHeros.append(divNomGame);
         divStat.append(divCarteHeros);
+        $('<button>').attr({
+          class:"glyphicon glyphicon-chevron-down",
+          id: "afficheDetails"+heroName
+        }).appendTo(divCarteHeros);
+        $( "#afficheDetails"+heroName).click(function() {
+          $('<div>').attr({
+            id:"details"+heroName
+          }).insertAfter("#"+heroName);
+        });
         index++;
       }
 })

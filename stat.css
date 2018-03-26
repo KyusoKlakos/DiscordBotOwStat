@@ -7,25 +7,24 @@
   #profilsBase{
     background-color:#dfe4ea;
     height: 140px;
+    width: 100%;
     margin-top: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
     min-width: 493px;
   }
 
   .stats{
     height: 140px;
     margin-top: 30px;
-    margin-left: /*150px*/ 10%;
-    margin-right: /*150px*/ 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 30px;
   }
 
 .carteHeroBase{
     background-color: #dfe4ea;
     height: 140px;
-    margin-left: /*300px*/25%;
-    margin-right: /*300px*/25%;
+    margin-left: 25%;
+    margin-right: 25%;
     min-width: 493px;
 }
 
@@ -53,4 +52,11 @@
 
 .imgHero{
     margin-left: 10%;
+}
+
+button{
+    background-color: #dfe4ea;
+    border-color: black;
+    height: 120px;
+    margin-top: 5%;
 }

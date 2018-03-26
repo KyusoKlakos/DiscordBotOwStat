@@ -57,6 +57,8 @@
     <div class="stats" id="hero23"></div>
     <div class="stats" id="hero24"></div>
     <div class="stats" id="hero25"></div>
+    <div class="stats" id="hero26"></div>
+    <div class="stats" id="hero27"></div>
     <footer id="mainFooter">
       <p>Fait par <a href="https://twitter.com/JeanKyuso">@Kyuso_yaah</a>, avec <a href="https://ow-api.com/">ow-api</a></p>
     </footer>
