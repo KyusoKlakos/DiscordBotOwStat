@@ -14,12 +14,18 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
+
+
 function recupDataJoueur(joueur,plateforme,region){;
   var url = "https://ow-api.com/v1/stats/"+plateforme+"/"+ region +"/"+ joueur +"/complete";
   console.log(url);
   ajaxGet(url,function (reponse){
+      //Le json retourner par l'api
       var result = $.parseJSON(reponse);
+      //Statistique des partie rapide
       var statQP = result.quickPlayStats.topHeroes;
+
+      //Le joueur en général
       var ico = $('<img>').attr({
         src: result.icon,
         id: "imgProfil",
@@ -33,9 +39,11 @@ function recupDataJoueur(joueur,plateforme,region){;
       $('#profilsBase').append(level);
       var index=1;
       //console.log(statQP);
+      
+      //Les nom des Heros et images
       for(heroName in statQP){
         let divStat = $('#hero'+index).attr({
-          id: heroName
+          id: heroName,
         });
         let divCarteHeros = $("<div>").attr({
           class: "carteHeroBase"
@@ -64,20 +72,28 @@ function recupDataJoueur(joueur,plateforme,region){;
             class: "imgHero"
           }).appendTo(divCarteHeros);
         }
+
         //console.log(statQP[heroName]);
         divNomGame.append(nomHeroHtml);
         divCarteHeros.append(divNomGame);
         divStat.append(divCarteHeros);
         $('<button>').attr({
           class:"glyphicon glyphicon-chevron-down",
-          id: "afficheDetails"+heroName
+          id: "afficheDetails" + heroName.substr(0,1).toUpperCase() +	heroName.substr(1,heroName.length).toLowerCase()
         }).appendTo(divCarteHeros);
-        $( "#afficheDetails"+heroName).click(function() {
-          $('<div>').attr({
-            id:"details"+heroName
-          }).insertAfter("#"+heroName);
-        });
+        let aled = $("<div>").attr({
+          id:"statsHero"+ heroName.substr(0,1).toUpperCase() +	heroName.substr(1,heroName.length).toLowerCase(),
+          class:"statsDev"
+        }).css('background-color','black').css('height','100px').css('display','none');
+        divStat.after(aled);
         index++;
       }
+
+      //Action sur les boutons pour les statistiques général des heros
+      $("#afficheDetailsAna").click(function() {
+        $('#statsHeroAna').animate({
+          height: 'toggle'
+        });
+      });
 })
 }
