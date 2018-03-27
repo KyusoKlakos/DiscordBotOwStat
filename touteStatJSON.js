@@ -1,3 +1,9 @@
+$( document ).ready(function() {
+  console.log( "document loaded" );
+});
+
+var tabHero = ["ana","bastion","brigitte","dva","doomfist","genji","hanzo","junkrat","lucio","mccree","mei","mercy","moira","orisa","pharah","reaper","reinhardt","roadhog","soldier76","sombra","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"];
+
 function ajaxGet(url, callback) {
     var req = new XMLHttpRequest();
     req.open("GET", url);
@@ -14,9 +20,17 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
+//Action lors de l'appui du bouton
+function carteStatistiqueBase(nomHero, stats){
+    let divCible = $('#statsHero'+ nomHero.substr(0,1).toUpperCase() +	nomHero.substr(1,heroName.length).toLowerCase());
+    divCible.empty();
+    divCible.animate({
+      height: 'toggle'
+    });
+    $('<span>').text(stats[nomHero].timePlayed).appendTo(divCible);
+}
 
-
-function recupDataJoueur(joueur,plateforme,region){;
+function recupDataJoueur(joueur,plateforme,region){
   var url = "https://ow-api.com/v1/stats/"+plateforme+"/"+ region +"/"+ joueur +"/complete";
   console.log(url);
   ajaxGet(url,function (reponse){
@@ -83,17 +97,18 @@ function recupDataJoueur(joueur,plateforme,region){;
         }).appendTo(divCarteHeros);
         let aled = $("<div>").attr({
           id:"statsHero"+ heroName.substr(0,1).toUpperCase() +	heroName.substr(1,heroName.length).toLowerCase(),
-          class:"statsDev"
-        }).css('background-color','black').css('height','100px').css('display','none');
+          class:"statsDev img-rounded"
+        }).css('height','500px').css('display','none');
         divStat.after(aled);
         index++;
       }
 
       //Action sur les boutons pour les statistiques général des heros
-      $("#afficheDetailsAna").click(function() {
-        $('#statsHeroAna').animate({
-          height: 'toggle'
+      for(let i=0; i<tabHero.length;i++){
+        $("#afficheDetails"+tabHero[i].substr(0,1).toUpperCase()+tabHero[i].substr(1,tabHero[i].length).toLowerCase()).click(function(){
+          carteStatistiqueBase(tabHero[i],statQP);
+          console.log(tabHero[i]);
         });
-      });
-})
+      }
+    });
 }
