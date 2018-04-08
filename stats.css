@@ -1,0 +1,97 @@
+    #imgProfil{
+        float: left;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    
+    #profilsBase{
+        background-color:#dfe4ea;
+        display:flex;
+        height: 140px;
+        width: 50%;
+        min-width: 493px;
+        margin:auto;
+        padding:auto;
+    }
+
+    .stats{
+        height: 140px;
+        margin-top: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .carteHeroBase{
+        background-color: #dfe4ea;
+        height: 140px;
+        margin-left: 25%;
+        margin-right: 25%;
+        min-width: 493px;
+    }
+
+    .carteHeroBase .imgHero{
+        height: 140px;
+    }
+
+    .carteHeroBase .nomGame {
+        display: flex;
+        margin-top: 18px;
+        width: 100%;
+    }
+
+    .carteHeroBase{
+        display: flex;
+    }
+
+    .nomHero{
+        margin:auto;
+        padding: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .imgHero{
+        margin-left: 10%;
+    }
+
+    button{
+        background-color: #dfe4ea;
+        border-color: black;
+        height: 120px;
+        margin-top: 5%;
+    }
+
+    .statsDev{
+        background-color: #dfe4ea;
+        margin-left: 25%;
+        margin-right: 25%;
+        min-width: 493px;
+        margin-top:10px;
+    }
+
+    #flex1{
+        display:flex;
+        flex-direction: column;
+    }
+
+    #iconRate{
+        width:50%;
+        margin:auto;
+        padding:auto;
+    }
+
+    #divRank{
+        display:flex;
+        flex-direction: column;
+        float:left;
+        width:20%;
+        margin:auto;
+        padding: auto;
+    }
+
+    #divGameWin{
+        margin:auto;
+        padding:auto;
+        text-align:center;
+    }

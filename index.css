@@ -1,0 +1,42 @@
+ body{
+   background: url('https://eu.battle.net/forums/static/images/backgrounds/background-overwatch-top.jpg')no-repeat center fixed;
+   -webkit-background-size: cover;
+   background-size: cover;
+ }
+ 
+   p, h1, label, h2, h3,h4{
+   color: white;
+ }
+ 
+ #mainFooter{
+     position: fixed;
+     bottom: 0px;
+     background-color: #2d3436;
+     width: 100%;
+     opacity: 0.95;
+ }
+ 
+ #mainFooter p{
+     text-align: center;
+     margin: auto;
+     padding: auto;
+ }
+ 
+ 
+ #recherche, #rechercheJoueurDiv, #rechercheHeroDiv{
+   position: absolute;
+   top: 50%; left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #636e72;
+   opacity: 0.85;
+   width: 500px;
+ }
+ 
+ #submit{
+   display: block;
+    margin : auto;
+ }
+
+ .center{
+   text-align: center;
+ }
